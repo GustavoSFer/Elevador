@@ -16,9 +16,9 @@ public class Elevador {
   public void subir(int andar) {
     if (this.qtdPessoaElevador <= 0) {
       System.out.println("Não existe pessoas dentro do elevador!");
-    } else if (andar > 0 && andar <= andarAtual) {
+    } else if (andar > 0 && andar >= andarAtual) {
       System.out.println("Elevador subindo");
-      this.andarAtual = andar;
+      this.andarAtual += andar;
     } else {
       System.out.println("Você ja esta no andar mais alto!");
     }

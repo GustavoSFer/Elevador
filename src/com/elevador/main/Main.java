@@ -12,6 +12,15 @@ public class Main {
     // Não deve subir porque nao existe pessoas no elevador.
     elevador.subir(3);
     elevador.entrarPessoa(1);
+    elevador.subir(3);
+    elevador.subir(3);
+    System.out.println(elevador.getAndarAtual());
+
+    elevador.subir(6);
+    System.out.println(elevador.getAndarAtual());
+    // tentando subir mais. mas ja esta no ultimo andar
+    elevador.subir(6);
+    System.out.println(elevador.getAndarAtual());
 
   }
 
