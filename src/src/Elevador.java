@@ -25,11 +25,13 @@ public class Elevador {
   }
 
   public void descer(int andar) {
-    if (andar >= 0 && this.andarAtual >= 0 && this.qtdPessoaElevador > 0) {
+    if (this.qtdPessoaElevador <= 0) {
+      System.out.println("Não existe pessoas no elevador!");
+    } else if (andar >= 0 && this.andarAtual >= andar) {
       System.out.println("Elevador descendo");
       this.andarAtual -= andar;
     } else {
-      System.out.println("Você ja esta no andar mais baixo!");
+      System.out.println("Você ja esta no andar mais baixo ou o numero informado é não desce mais");
     }
   }
 

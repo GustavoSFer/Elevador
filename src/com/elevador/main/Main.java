@@ -32,6 +32,9 @@ public class Main {
 
     elevador.descer(5);
     System.out.println("Andar atual: " + elevador.getAndarAtual());
+
+    // Tentando descer sem ter tudo isso de andar
+    elevador.descer(10);
   }
 
 }
