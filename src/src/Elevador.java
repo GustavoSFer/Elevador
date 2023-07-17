@@ -4,6 +4,7 @@ public class Elevador {
   private int qtdCapacidade;
   private int totalAndares;
   private int andarAtual;
+  private int qtdPessoaElevador;
 
   public Elevador(int capacidade, int totalAndares) {
     this.qtdCapacidade = capacidade;
@@ -12,7 +13,7 @@ public class Elevador {
   }
 
   public void subir(int andar) {
-    if (andar > 0 && andar <= andarAtual) {
+    if (andar > 0 && andar <= andarAtual && this.qtdPessoaElevador > 0) {
       System.out.println("Elevador subindo");
       this.andarAtual = andar;
     } else {
@@ -21,7 +22,7 @@ public class Elevador {
   }
 
   public void descer(int andar) {
-    if (andar >= 0 && this.andarAtual >= 0) {
+    if (andar >= 0 && this.andarAtual >= 0 && this.qtdPessoaElevador > 0) {
       System.out.println("Elevador descendo");
       this.andarAtual = andar;
     } else {
