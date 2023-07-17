@@ -14,10 +14,10 @@ public class Main {
     elevador.entrarPessoa(1);
     elevador.subir(3);
     elevador.subir(3);
-    System.out.println(elevador.getAndarAtual());
+    System.out.println("Andar atual: " + elevador.getAndarAtual());
 
     elevador.subir(6);
-    System.out.println(elevador.getAndarAtual());
+    System.out.println("Andar atual: " + elevador.getAndarAtual());
     // tentando subir mais. mas ja esta no ultimo andar
     elevador.subir(6);
     System.out.println(elevador.getAndarAtual());
@@ -27,6 +27,11 @@ public class Main {
     elevador.entrarPessoa(4);
     System.out.println(elevador.getQtdPessoaElevador());
 
+    elevador.descerPessoas(2);
+    System.out.println(elevador.getQtdPessoaElevador());
+
+    elevador.descer(5);
+    System.out.println("Andar atual: " + elevador.getAndarAtual());
   }
 
 }

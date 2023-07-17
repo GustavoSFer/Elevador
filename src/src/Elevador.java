@@ -27,7 +27,7 @@ public class Elevador {
   public void descer(int andar) {
     if (andar >= 0 && this.andarAtual >= 0 && this.qtdPessoaElevador > 0) {
       System.out.println("Elevador descendo");
-      this.andarAtual = andar;
+      this.andarAtual -= andar;
     } else {
       System.out.println("Você ja esta no andar mais baixo!");
     }
