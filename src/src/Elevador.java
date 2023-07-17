@@ -11,6 +11,15 @@ public class Elevador {
     this.andarAtual = 0;
   }
 
+  public void subir(int andar) {
+    if (andar <= andarAtual) {
+      System.out.println("Elevador subindo");
+      this.andarAtual = andar;
+    } else {
+      System.out.println("Você ja esta no andar mais alto!");
+    }
+  }
+
   public int getQtdCapacidade() {
     return qtdCapacidade;
   }
