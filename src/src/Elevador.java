@@ -35,8 +35,17 @@ public class Elevador {
     if (this.qtdPessoaElevador + qtd > this.qtdCapacidade) {
       System.out.println("elevador não suporta essa quantidade de pessoas dentro dele");
     } else {
-      System.out.println("entrando pessoas!");
-      this.qtdPessoaElevador = qtd;
+      System.out.println("Entrando pessoas!");
+      this.qtdPessoaElevador += qtd;
+    }
+  }
+
+  public void descerPessoas(int qtd) {
+    if (this.qtdPessoaElevador < qtd) {
+      System.out.println("exite menas pessoas dentro do elevador");
+    } else {
+      System.out.println("Saindo pessoas!");
+      this.qtdPessoaElevador -= qtd;
     }
   }
 
