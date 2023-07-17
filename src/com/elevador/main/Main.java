@@ -22,6 +22,11 @@ public class Main {
     elevador.subir(6);
     System.out.println(elevador.getAndarAtual());
 
+    // Não suporta a quantidade de pessoas
+    elevador.entrarPessoa(20);
+    elevador.entrarPessoa(4);
+    System.out.println(elevador.getQtdPessoaElevador());
+
   }
 
 }

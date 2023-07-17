@@ -63,4 +63,8 @@ public class Elevador {
     return andarAtual;
   }
 
+  public int getQtdPessoaElevador() {
+    return this.qtdPessoaElevador;
+  }
+
 }
