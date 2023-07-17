@@ -12,11 +12,20 @@ public class Elevador {
   }
 
   public void subir(int andar) {
-    if (andar <= andarAtual) {
+    if (andar > 0 && andar <= andarAtual) {
       System.out.println("Elevador subindo");
       this.andarAtual = andar;
     } else {
       System.out.println("Você ja esta no andar mais alto!");
+    }
+  }
+
+  public void descer(int andar) {
+    if (andar >= 0 && this.andarAtual >= 0) {
+      System.out.println("Elevador descendo");
+      this.andarAtual = andar;
+    } else {
+      System.out.println("Você ja esta no andar mais baixo!");
     }
   }
 
