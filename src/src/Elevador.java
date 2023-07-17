@@ -10,6 +10,7 @@ public class Elevador {
     this.qtdCapacidade = capacidade;
     this.totalAndares = totalAndares;
     this.andarAtual = 0;
+    this.qtdPessoaElevador = 0;
   }
 
   public void subir(int andar) {
@@ -27,6 +28,15 @@ public class Elevador {
       this.andarAtual = andar;
     } else {
       System.out.println("Você ja esta no andar mais baixo!");
+    }
+  }
+
+  public void entrarPessoa(int qtd) {
+    if (this.qtdPessoaElevador + qtd > this.qtdCapacidade) {
+      System.out.println("elevador não suporta essa quantidade de pessoas dentro dele");
+    } else {
+      System.out.println("entrando pessoas!");
+      this.qtdPessoaElevador = qtd;
     }
   }
 
